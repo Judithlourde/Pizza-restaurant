@@ -30,7 +30,7 @@
 					{ title: 'Pizza', caption: 'Pizza', file:  '/images/img1.jpeg' },
 					{ title: 'Noodle', caption: 'Noodle', file:  '/images/img2.jpeg' },
 					{ title: 'Pizza', caption: 'Pizza', file:  '/images/img3.jpeg' },
-					{ title: 'Pizza', caption: 'Pizza', file:  '/images/img4.jpg' },
+					// { title: 'Pizza', caption: 'Pizza', file:  '/images/img4.jpg' },
 					
 				],
 			};
@@ -60,7 +60,7 @@
 
 <style>
     .slideshow {
-		max-width: calc(486px + 14%);
+		max-width: calc(786px + 24%);
 		position: relative;
 		padding: 10px;
 		margin-right: auto;
@@ -72,9 +72,13 @@
 		width: 100%;
 	}
 
+	.slideshow__slide {
+		width: 100%;
+	}
+
 	.slideshow__img {
 		object-fit: cover;
-		min-width: 100%;
+		width: 100%;
 	}
 
 	.slideshow__caption {

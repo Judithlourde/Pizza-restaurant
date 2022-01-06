@@ -228,7 +228,7 @@
         padding: 5px;
         color: #FBF6E5;
         font-size: 1.2em;
-        /* text-align: right; */
+        text-align: right;
     }
 
     .burgerMenu__images {
@@ -247,6 +247,7 @@
         height: 100%;
     }
 
+    /* small devices (mobiles, 768px and down) */
     @media screen and (max-width: 1140px) {
         .burgerMenu {
             font-size: 1.1em;

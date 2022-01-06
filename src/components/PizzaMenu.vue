@@ -452,18 +452,14 @@
     }
 
     .pizzaMenu__list-extra {
-        /* font-family: var(--second-font-family); */
         color: #FED08C;
-        
     }
 
     .pizzaMenu__list-extra > h3 {
         padding-top: 30px;
-        /* color: #FBF6E5; */
-        /* font-family: var(--font-family); */
     }
 
-    /* Medium devices (landscape tablets, 768px and up) */
+    /* small devices (mobiles, 768px and down) */
     @media screen and (max-width: 1140px) {
         .pizzaMenu {
             font-size: 1.1em;
@@ -482,11 +478,10 @@
         }
 
         .pizzaMenu__list--mobile {
-            position: absolute;
-            visibility:hidden;
-            display:none;
-            /* display: none !important; */
-            /* visibility: hidden; */
+            position: absolute;                         /*  position: absolute helps to hide content */
+            visibility: hidden;
+            display: none;
+            /* display: none !important; */             /*  display: none; not working here, tried with !important */
         }
 
         .pizzaMenu {

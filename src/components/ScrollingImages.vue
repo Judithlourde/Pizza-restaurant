@@ -1,7 +1,7 @@
 <template>
     <div class="marquee">
         <ul class="marquee-content">
-            <li v-for="image in images">
+            <li v-for="image in images" :key="image.index">
                 <img class="slideshow__img" :src="image.file" :alt="image.caption">
             </li>
 
@@ -16,7 +16,7 @@
 export default {
 		data() {
 			return {
-				index: 4,
+				index: 0,
 				showCaption: true, 
 				images: [
 					{ title: 'Pizza', caption: 'Pizza', file: '/images/img1.jpeg' },
@@ -31,13 +31,6 @@ export default {
 
 				],  
 			};
-		},
-
-        computed: {
-			currentImage() {
-                // return this.index;
-				// return this.images[this.index];
-			}
 		},
 }
 </script>
@@ -112,6 +105,7 @@ export default {
         border: 2px solid  #FBF6E5;
     }
 
+    /* small devices (mobiles, 768px and down) */
     @media screen and (max-width: 1100px) {
         .marquee { font-size: 12px; }
         :root {

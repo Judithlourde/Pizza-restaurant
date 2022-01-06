@@ -1,7 +1,5 @@
 <template>
 	<div class="collapsible">
-		<!-- <hr class="collapsible__seperator" /> -->
-
         <div class="collapsible__top">
 			<h1 @click="showComponent" :class="`collapsible__title ${ !this.collapsed ? 'collapsible__title--rotated' : ''}`" aria-label="collapsible button">{{ title }}</h1>
 
@@ -10,8 +8,8 @@
 			</button>
         </div>
 
-		<div class="collapsible__component" v-if="!this.collapsed">		<!-- view component if not collapsed -->
-			<slot />													<!-- placeholder for component (data) -->
+		<div class="collapsible__component" v-if="!this.collapsed">		<!-- view components -->
+			<slot />													<!-- placeholder for components (data) -->
 		</div>
 
 		<hr class="collapsible__seperator" /> 
@@ -21,7 +19,7 @@
 <script>
 	export default {
 		props: {
-            title: {			/* Title as prop so give them component name in dashboard.vue class="collapsible__title" */
+            title: {			/* Title as prop so give them component name in Collapsible.vue */
                 type: String	
 			}
 		},
@@ -43,7 +41,6 @@
 <style>
 	.collapsible {
 		width: 100%;
-		/* padding: 30px; */
 	}
 
 	.collapsible__seperator {
@@ -89,7 +86,8 @@
 	.collapsible__title--rotated {
 		color: #FBF6E5;
 	}
-
+	
+	/* small devices (mobiles, 768px and down) */
 	@media screen and (max-width: 1140px) {
 		.collapsible__component {
 			font-size: 1.5em;

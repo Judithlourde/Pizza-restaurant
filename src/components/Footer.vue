@@ -4,7 +4,7 @@
     <section class="footer">
         <ul class="footer__address">
             <li>
-                <h1>Addresse</h1>
+                <h1>Adresse</h1>
             </li>
 
             <li>
@@ -77,7 +77,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-width: calc(486px + 34%);
+        max-width: calc(786px + 24%);
         margin-left: auto;
         margin-right: auto;
         padding: 20px 0;
@@ -86,15 +86,23 @@
     .footer > ul {
         width: 100%;
         height: 100%;
+        padding: 0 20px;
     }
 
     .footer > ul > li {
         list-style: none;
-        /* padding: .25em; */
+    }
+
+    .footer__address li h1 {
+        padding-bottom: 10px;
     }
 
     .footer__address li p {
         padding: 5px 0;
+    }
+
+    .footer__contact li h1 {
+        padding-bottom: 10px;
     }
 
     .footer__contact li div p {
@@ -102,7 +110,8 @@
     }
 
     .footer__openingTime li {
-        padding-bottom: 10px;
+        padding-bottom: 15px;
+        text-align: center;
     }
 
     .footer__openingTime li p:nth-child(2) {
@@ -116,6 +125,8 @@
 
     .footer__contact-icon {
         display: flex;
+        /* flex-direction: row;
+        justify-content: center; */
     }
 
     .footer__contact-icon > img {
@@ -152,9 +163,12 @@
         margin: 2% 10%;
     }
 
+    /* small devices (mobiles, 768px and down) */
     @media screen and (max-width: 1140px) {
         .footer {
             flex-direction: column;
+            align-items: center;
+            text-align: center;
             font-size: 2em;
         }
 
@@ -167,12 +181,19 @@
             width: 50px;
         }
 
+        .footer__contact-icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
         .footer-bottom > h1 {
             font-size: 2.5em;
         }
 
         .footer-bottom > p {
-            font-size: 1em;
+            font-size: .75em;
             margin-bottom: 30px;
 
         }

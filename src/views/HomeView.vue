@@ -1,7 +1,5 @@
 <template>
-    <div class="home">
-        <Home />
-    </div>
+    <Home />
 </template>
 
 <script>
@@ -13,9 +11,3 @@ export default {
     }
 }
 </script>
-
-<style>
-    .home {
-        /* color: aqua; */
-    }
-</style>

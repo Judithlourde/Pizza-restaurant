@@ -33,7 +33,6 @@
     </section>
 </template>
 
-
 <script>
     import Slider from '../components/Slider.vue';
     import Collapsible from '../components/Collapsible.vue';
@@ -101,6 +100,7 @@
         width: 30px;
     }
 
+    /* small devices (mobiles, 768px and down) */
     @media screen and (max-width: 1140px) {
         .header > h1 {
             padding-top: 20px;
