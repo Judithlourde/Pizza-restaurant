@@ -193,7 +193,7 @@
         }
 
         .footer-bottom > p {
-            font-size: .85em;
+            font-size: 1em;
             margin-bottom: 30px;
 
         }
