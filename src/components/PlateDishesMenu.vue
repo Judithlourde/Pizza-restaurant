@@ -2,129 +2,56 @@
     <section class="plateDishesMenu">
         <ul class="plateDishesMenu__list">
             <div> 
-                <h1>TALLERKENRETTER</h1>
-                <p>Serveres med salat, tomat, rødløk, mais, dressing, pommes frites, bernaise og 0,5 l drikke</p>
+                <h1>{{ plateDishesTitle }}</h1>
+                <p>{{ plateDishesDescription }}</p>
             </div>
 
             <li>
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAwayTitle }}</span>
+                    <span>{{ dinningInTitle }}</span>
                 </div>   
             </li>
 
-            <li> 
-                <h3>50. Biffsnaddertallerken</h3>
-
+            <li v-for="plateDish in plateDishes" :key="plateDish"> 
                 <div>
-                    <span>194,-</span>
-                    <span>204,-</span>
+                    <h3>{{ plateDish.name }}</h3>
+                    <p class="plateDishesMenu__list-allergi">{{ plateDish.allergi }}</p>
                 </div>
-            </li>
-
-            <li> 
-                <h3>51. Kyllingsnaddertallerken</h3>
+                
 
                 <div>
-                    <span>194,-</span>
-                    <span>204,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>52. Kyllingfiletmiddag</h3>
-
-                <div>
-                    <span>220,-</span>
-                    <span>230,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>53. Løvstektallerken enkel</h3>
-
-                <div>
-                    <span>150,-</span>
-                    <span>160,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>54. Løvstektallerken dobbel</h3>
-
-                <div>
-                    <span>184,-</span>
-                    <span>194,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>55. Nuggetstallerken 7 biter</h3>
-
-                <div>
-                    <span>109,-</span>
-                    <span>110,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>56. Nuggetstallerken 12 biter</h3>
-
-                <div>
-                    <span>149,-</span>
-                    <span>159,-</span>
+                    <span>{{ plateDish.takeAway }}</span>
+                    <span>{{ plateDish.dinningIn }}</span>
                 </div>
             </li>
         </ul>
 
         <ul class="plateDishesMenu__list">
             <div> 
-                <h3>DIVERSE</h3>
+                <h3>{{ otherDishesTitle }}</h3>
             </div>
 
             <li>
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAwayTitle }}</span>
+                    <span>{{ dinningInTitle }}</span>
                 </div>   
             </li>
-            <li> 
-                <h3>Pommes frites liten</h3>
 
+            <li v-for="otherDish in otherDishes" :key="otherDish"> 
                 <div>
-                    <span>45,-</span>
-                    <span>55,-</span>
+                    <h3>{{ otherDish.name }}</h3>
+                    <p class="plateDishesMenu__list-allergi">{{ otherDish.allergi }}</p>
                 </div>
-            </li>
-
-            <li> 
-                <h3>Pommes frites stor</h3>
 
                 <div>
-                    <span>55,-</span>
-                    <span>65,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>Brus 0,5 l</h3>
-
-                <div>
-                    <span>35,-</span>
-                    <span>38,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>Brus 1,5 l</h3>
-
-                <div>
-                    <span>55,-</span>
-                    <span>60,-</span>
+                    <span>{{ otherDish.takeAway }}</span>
+                    <span>{{ otherDish.dinningIn }}</span>
                 </div>
             </li>
         </ul>
@@ -133,34 +60,28 @@
     <section class="plateDishesMenu">
         <ul class="plateDishesMenu__list">
             <div> 
-                <h1>BARNEMENY</h1>
-                <p>Serveres med pommes frites og Kuli</p>
+                <h1>{{ kidsMenuTitle }}</h1>
+                <p>{{ kidsMenuDescription }}</p>
             </div>
 
             <li> 
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAwayTitle }}</span>
+                    <span>{{ dinningInTitle }}</span>
                 </div>
             </li>
 
-            <li> 
-                <h3>Grillpølse</h3>
+            <li v-for="menu in kidsMenu" :key="menu">
+                <div>
+                    <h3>{{ menu.name }}</h3>
+                    <p class="plateDishesMenu__list-allergi">{{menu.allergi}}</p>
+                </div> 
 
                 <div>
-                    <span>80,-</span>
-                    <span>90,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>Nuggets</h3>
-
-                <div>
-                    <span>80,-</span>
-                    <span>90,-</span>
+                    <span>{{ menu.takeAway }}</span>
+                    <span>{{ menu.dinningIn }}</span>
                 </div>
             </li>
         </ul>
@@ -181,10 +102,48 @@
     </section>
 </template>
 
+<script>
+    export default {
+        data() {
+            return {
+                plateDishesTitle: 'TALLERKENRETTER',
+                plateDishesDescription: 'Serveres med salat, tomat, rødløk, mais, dressing, pommes frites, bernaise og 0,5 l drikke',
+                otherDishesTitle: 'DIVERSE',
+                kidsMenuTitle: 'BARNEMENY',
+                kidsMenuDescription: 'Serveres med pommes frites og Kuli',
+                takeAwayTitle: 'Ta med',
+                dinningInTitle: 'Inne',
+
+                plateDishes: [
+                    {name: '50. Biffsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Egg, Melk, Selleri, Sennep'},
+                    {name: '51. Kyllingsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
+                    {name: '52. Kyllingfiletmiddag', takeAway: '220,-', dinningIn: '230,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep' },
+                    {name: '53. Løvstektallerken enkel', takeAway: '150,-', dinningIn: '160,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
+                    {name: '54. Løvstektallerken dobbel', takeAway: '184,-', dinningIn: '194,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
+                    {name: '55. Nuggetstallerken 7 biter', takeAway: '109,-', dinningIn: '110,-', allergi: 'Gluten (Hvete)' },
+                    {name: '56. Nuggetstallerken 12 biter', takeAway: '149,-', dinningIn: '159,-', allergi: 'Gluten (Hvete)' }
+                ],
+
+                otherDishes: [
+                    {name: 'Pommes frites liten', takeAway: '45,-', dinningIn: '55,-', allergi: 'Selleri (i krydderet)'},
+                    {name: 'Pommes frites liten', takeAway: '55,-', dinningIn: '65,-', allergi: 'Selleri (i krydderet)'},
+                    {name: 'Brus 0,5 l', takeAway: '35,-', dinningIn: '38,-'},
+                    {name: 'Brus 1,5 l', takeAway: '55,-', dinningIn: '60,-'}
+                ],
+
+                kidsMenu: [
+                    {name: 'Grillpølse', takeAway: '80,-', dinningIn: '90,-', allergi: 'Brød: Gluten (Hvete), Egg, Melk, Sesam, Pommes frites: Selleri (i krydderet)'},
+                    {name: 'Nuggets', takeAway: '80,-', dinningIn: '90,-', allergi: 'Pommes frites: Selleri (i krydderet)'}
+                ]
+            }
+        }    
+    }
+</script>
+
 <style>
     .plateDishesMenu {
         background: #3A3A3A;
-        max-width: calc(786px + 24%);
+        max-width: calc(886px + 24%);
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
@@ -198,7 +157,7 @@
     .plateDishesMenu__list {
         width: 100%;
         height: 100%;
-        padding: 30px 0;
+        padding: 20px;
     }
 
     .plateDishesMenu__list > div > p {
@@ -213,15 +172,21 @@
         width: 100%;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 50px;
         padding: 10px;
+    }
+
+    .plateDishesMenu__list-allergi {
+        color: rgb(240, 196, 179);
+        font-style: italic;
+        padding-top: 5px;
+        font-family: var(--second-font-family);
     }
 
     .plateDishesMenu__list > div {
         color: #FBF6E5;
     }
 
-    .plateDishesMenu__list > li > div {
+    .plateDishesMenu__list > li > div:nth-child(2) {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -240,8 +205,8 @@
     }
 
     .plateDishesMenu__image {
-        width: 100%;
-        height: 100%;
+        width: 200px;
+        height: 200px;
     }
 
     .plateDishesMenu__image > img {
@@ -262,6 +227,13 @@
         .plateDishesMenu__image {
             width: 300px;
             height: 300px;
+        }
+
+        .plateDishesMenu__list li {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
         }
     }
 </style>

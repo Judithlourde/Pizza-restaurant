@@ -2,139 +2,51 @@
     <section class="kebabMenu">
         <ul class="kebabMenu__list">
             <div> 
-                <h1>KEBAB I PITA</h1>
-                <p>Serveres med kjøtt, salat, tomat, rødløk, mais og dressing</p>
+                <h1>{{ kebabItemsFirstTitle }}</h1>
+                <p>{{ kebabItemsFirstDescription }}</p>
+                <p class="kebabMenu__list-allergi">{{ allergi }}</p>
             </div>
 
             <li>
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAway }}</span>
+                    <span>{{ dinningIn }}</span>
                 </div>   
             </li>
 
-            <li> 
-                <h3>34. Kebab i pita vanlig</h3>
+            <li v-for="kebabItem in kebabItemsFirst" :key="kebabItem"> 
+                <h3>{{ kebabItem.name }}</h3>
 
                 <div>
-                    <span>95,-</span>
-                    <span>105,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>35. Kebab i pita stor</h3>
-
-                <div>
-                    <span>110,-</span>
-                    <span>120,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>36.Kylling i pita liten</h3>
-
-                <div>
-                    <span>110,-</span>
-                    <span>120,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>37. Kylling i pita stor</h3>
-
-                <div>
-                    <span>120,-</span>
-                    <span>130,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>38. Falafel i pita</h3>
-
-                <div>
-                    <span>85,-</span>
-                    <span>95,-</span>
+                    <span>{{ kebabItem.takeAway }}</span>
+                    <span>{{ kebabItem.dinningIn }}</span>
                 </div>
             </li>
         </ul>
 
         <ul class="kebabMenu__list">
             <div> 
-                <h1>KEBABRULL</h1>
-                <p>Serveres med kjøtt, salat, tomat, rødløk, mais og dressing</p>
+                <h1>{{ kebabItemsSecondTitle }}</h1>
+                <p>{{ kebabItemsSecondDescription }}</p>
+                <p class="kebabMenu__list-allergi">{{ allergi }}</p>
             </div>
 
             <li>
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAway }}</span>
+                    <span>{{ dinningIn }}</span>
                 </div>   
             </li>
-            <li> 
-                <h3>39. Kebabrull vanlig</h3>
+            <li v-for="kebabItem in kebabItemsSecond" :key="kebabItem"> 
+                <h3>{{ kebabItem.name }}</h3>
 
                 <div>
-                    <span>120,-</span>
-                    <span>130,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>40. Kebabrull vanlig m/ost</h3>
-
-                <div>
-                    <span>140,-</span>
-                    <span>150,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>41. Kebabrull kylling</h3>
-
-                <div>
-                    <span>140,-</span>
-                    <span>150,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>42. Kebabrull kylling m/ost</h3>
-
-                <div>
-                    <span>160,-</span>
-                    <span>170,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>43. Kebabrull biff</h3>
-
-                <div>
-                    <span>140,-</span>
-                    <span>150,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>44. Kebabrull biff m/ost</h3>
-
-                <div>
-                    <span>160,-</span>
-                    <span>170,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>45. Falafelrull</h3>
-
-                <div>
-                    <span>95,-</span>
-                    <span>105,-</span>
+                    <span>{{ kebabItem.takeAway }}</span>
+                    <span>{{ kebabItem.dinningIn }}</span>
                 </div>
             </li>
         </ul>
@@ -143,52 +55,26 @@
     <section class="kebabMenu">
         <ul class="kebabMenu__list">
             <div> 
-                <h1>KEBABTALLERKEN</h1>
-                <p>Serveres med kjøtt, salat, tomat, rødløk, mais og dressing, pommes frites, bernaise og 0,5 l drikke</p>
+                <h1>{{ kebabItemsThirdTitle }}</h1>
+                <p>{{ kebabItemsThirdDescription }}</p>
+                <p class="kebabMenu__list-allergi">{{ allergi }}</p>
             </div>
 
             <li> 
                 <h3></h3>
 
                 <div>
-                    <span>Ta med</span>
-                    <span>Inne</span>
+                    <span>{{ takeAway }}</span>
+                    <span>{{ dinningIn }}</span>
                 </div>
             </li>
 
-            <li> 
-                <h3>46. Kebabtallerken vanlig</h3>
+            <li v-for="kebabItem in kebabItemsThird" :key="kebabItem"> 
+                <h3>{{ kebabItem.name }}</h3>
 
                 <div>
-                    <span>160,-</span>
-                    <span>170,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>47. Kebabtallerken stor</h3>
-                
-                <div>
-                    <span>180,-</span>
-                    <span>190,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>48. Kyllingtallerken vanlig</h3>
-
-                <div>
-                    <span>170,-</span>
-                    <span>180,-</span>
-                </div>
-            </li>
-
-            <li> 
-                <h3>49. Kyllingtallerken stor</h3>
-
-                <div>
-                    <span>190,-</span>
-                    <span>200,-</span>
+                    <span>{{ kebabItem.takeAway }}</span>
+                    <span>{{ kebabItem.dinningIn }}</span>
                 </div>
             </li>
         </ul>
@@ -208,10 +94,51 @@
     </section>
 </template>
 
+<script>
+    export default {
+        data() {
+            return {
+                kebabItemsFirstTitle: 'KEBAB I PITA',
+                kebabItemsFirstDescription: 'Serveres med kjøtt, salat, tomat, rødløk, mais og dressing',
+                kebabItemsSecondTitle: 'KEBABRULL',
+                kebabItemsSecondDescription: 'Serveres med kjøtt, salat, tomat, rødløk, mais og dressing',
+                kebabItemsThirdTitle: 'KEBABTALLERKEN',
+                kebabItemsThirdDescription: 'Serveres med kjøtt, salat, tomat, rødløk, mais og dressing, pommes frites, bernaise og 0,5 l drikke',
+                allergi: 'Gluten (Hvete), Egg, Melk, Soya, Selleri, Sennep',
+                takeAway: 'Ta med',
+                dinningIn: 'Inne',
+                kebabItemsFirst: [
+                    {name: '34. Kebab i pita vanlig', takeAway: '95,-', dinningIn: '105,-'},
+                    {name: '35. Kebab i pita stor', takeAway: '110,-', dinningIn: '120,-'},
+                    {name: '36.Kylling i pita liten', takeAway: '110,-', dinningIn: '120,-'},
+                    {name: '37. Kylling i pita stor', takeAway: '120,-', dinningIn: '130,-'},
+                    {name: '38. Falafel i pita', takeAway: '85,-', dinningIn: '95,-'}
+                ],
+
+                kebabItemsSecond: [
+                    {name: '39. Kebabrull vanlig', takeAway: '120,-', dinningIn: '130,-'},
+                    {name: '40. Kebabrull vanlig m/ost', takeAway: '140,-', dinningIn: '150,-'},
+                    {name: '41. Kebabrull kylling', takeAway: '140,-', dinningIn: '150,-'},
+                    {name: '42. Kebabrull kylling m/ost', takeAway: '160,-', dinningIn: '170,-'},
+                    {name: '44. Kebabrull biff m/ost', takeAway: '160,-', dinningIn: '170,-'},
+                    {name: '45. Falafelrull', takeAway: '95,-', dinningIn: '105,-'},
+                ],
+
+                kebabItemsThird: [
+                    {name: '46. Kebabtallerken vanlig', takeAway: '160,-', dinningIn: '170,-'},
+                    {name: '47. Kebabtallerken stor', takeAway: '180,-', dinningIn: '190,-'},
+                    {name: '48. Kyllingtallerken vanlig', takeAway: '170,-', dinningIn: '180,-'},
+                    {name: '49. Kyllingtallerken stor', takeAway: '190,-', dinningIn: '200,-'},
+                ]
+            }
+        }
+    }
+</script>
+
 <style>
     .kebabMenu {
         background: #3A3A3A;
-        max-width: calc(786px + 24%);
+        max-width: calc(886px + 24%);
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
@@ -225,7 +152,7 @@
     .kebabMenu__list {
         width: 100%;
         height: 100%;
-        padding: 30px 0;
+        padding: 10px;
     }
 
     .kebabMenu__list > div > p {
@@ -240,8 +167,13 @@
         width: 100%;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 50px;
         padding: 10px;
+    }
+
+    .kebabMenu__list-allergi {
+        color: rgb(240, 196, 179);
+        font-style: italic;
+        padding-top: 5px;    
     }
 
     .kebabMenu__list > div {
@@ -267,8 +199,8 @@
     }
 
     .kebabMenu__image {
-        width: 100%;
-        height: 100%;
+        width: 200px;
+        height: 200px;
     }
 
     .kebabMenu__image > img {
@@ -289,6 +221,13 @@
         .kebabMenu__image {
             width: 300px;
             height: 300px;
+        }
+
+        .kebabMenu__list li {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
         }
     }
 </style>

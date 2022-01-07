@@ -86,6 +86,10 @@
 	.collapsible__title--rotated {
 		color: #FBF6E5;
 	}
+
+	.collapsible__component { 
+		padding: 0 0 30px 0;
+	}
 	
 	/* small devices (mobiles, 768px and down) */
 	@media screen and (max-width: 1140px) {

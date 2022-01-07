@@ -1,11 +1,11 @@
 <template>
     <div class="marquee">
         <ul class="marquee-content">
-            <li v-for="image in images" :key="image.index">
+            <li v-for="image in images" :key="image">
                 <img class="slideshow__img" :src="image.file" :alt="image.caption">
             </li>
 
-            <li v-for="(image, index) in images" :key="index">
+            <li v-for="image in images" :key="image">
                 <img class="slideshow__img" :src="image.file" :alt="image.caption">
             </li>
         </ul>

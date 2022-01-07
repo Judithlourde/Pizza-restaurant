@@ -60,7 +60,7 @@
 
 <style>
     .slideshow {
-		max-width: calc(786px + 24%);
+		max-width: calc(886px + 24%);
 		position: relative;
 		padding: 10px;
 		margin-right: auto;

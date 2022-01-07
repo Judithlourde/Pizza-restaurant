@@ -188,6 +188,10 @@
             /* align-items: center; */
         }
 
+        .footer-bottom {
+            width: 100%;
+        }
+
         .footer-bottom > h1 {
             font-size: 2.5em;
         }
