@@ -38,9 +38,9 @@
             <li>
                 <div class="footer__contact-icon">
                     <img src="/svg/facebook.svg" alt="facebook-icon">
+                    
                     <a href="https://www.facebook.com/Spikkestad-pizza-og-grill-112698187314811/"><p>følg oss på Facebook</p></a>
                 </div>
-                
             </li>     
         </ul>
 
@@ -50,19 +50,9 @@
             </li>
 
             <li>
-                <p>Mandag - Torsdag</p>
-                <p>11.00 - 20.30</p>
+                <p>Mandag - Søndag</p>
+                <p>13.00 - 20.30</p>
             </li>
-
-            <li>
-                <p>Fredag - Lørdag</p>
-                <p>11.00 - 22.00</p>
-            </li>   
-
-            <li>
-                <p>Søndag</p>
-                <p>13.00 - 22.00</p>
-            </li>     
         </ul>
     </section>
 
@@ -116,6 +106,7 @@
 
     .footer__openingTime li p:nth-child(2) {
         color: #FBF6E5;
+        padding-top: 5px;
         font-family: var(--second-font-family);
     }
 
