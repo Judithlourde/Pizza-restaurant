@@ -2,7 +2,7 @@
     <section class="pizzaMenu">
         <ol class="pizzaMenu__list">
             <li>
-               <h3>Spis her +10kr</h3>   
+               <h3>Spis her + 10kr</h3>   
 
                <div class="pizzaMenu__pizzaSize">
                     <div> 

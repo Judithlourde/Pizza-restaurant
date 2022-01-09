@@ -64,7 +64,11 @@
                 <h3></h3>
 
                 <div>
-                    <span>{{ takeAway }}</span>
+                    <div class="kebabMenu__list-takeAway">
+                        <span>{{ takeAway }}</span>
+                        <p>{{ takeAwayPant }}</p>
+                    </div>
+
                     <span>{{ dinningIn }}</span>
                 </div>
             </li>
@@ -106,6 +110,7 @@
                 kebabItemsThirdDescription: 'Serveres med kjøtt, salat, tomat, rødløk, mais og dressing, pommes frites, bernaise og 0,5 l drikke',
                 allergi: 'Gluten (Hvete), Egg, Melk, Soya, Selleri, Sennep',
                 takeAway: 'Ta med',
+                takeAwayPant: 'Pant +2Kr',
                 dinningIn: 'Inne',
                 kebabItemsFirst: [
                     {name: '34. Kebab i pita vanlig', takeAway: '95,-', dinningIn: '105,-'},
@@ -196,6 +201,16 @@
         display: flex;
         gap: 10px;
         padding: 100px 0;
+    }
+
+    .kebabMenu__list-takeAway {
+        color: #FBF6E5; 
+        text-align: right; 
+        font-size: 1em;  
+    }
+
+    .kebabMenu__list-takeAway > p {
+        padding-top: 5px;
     }
 
     .kebabMenu__image {

@@ -10,7 +10,11 @@
                 <h3></h3>
 
                 <div>
-                    <span>{{ takeAwayTitle }}</span>
+                    <div class="plateDishesMenu__list-takeAway">
+                        <span>{{ takeAwayTitle }}</span>
+                        <p>{{ takeAwayPant }}</p>
+                    </div>
+                    
                     <span>{{ dinningInTitle }}</span>
                 </div>   
             </li>
@@ -112,6 +116,7 @@
                 kidsMenuTitle: 'BARNEMENY',
                 kidsMenuDescription: 'Serveres med pommes frites og Kuli',
                 takeAwayTitle: 'Ta med',
+                takeAwayPant: 'Pant +2Kr',
                 dinningInTitle: 'Inne',
 
                 plateDishes: [
@@ -196,6 +201,16 @@
         color: #FBF6E5;
         font-size: 1.2em;
         text-align: right;
+    }
+
+    .plateDishesMenu__list-takeAway {
+        color: #FBF6E5; 
+        text-align: right; 
+        font-size: 1em;  
+    }
+
+    .plateDishesMenu__list-takeAway > p {
+        padding-top: 5px;
     }
 
     .plateDishesMenu__images {

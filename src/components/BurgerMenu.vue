@@ -37,7 +37,11 @@
                 <p></p>
 
                 <div>
-                    <span>{{ takeAway }}</span>
+                    <div class="burgerMenu__list-takeAway">
+                        <span>{{ takeAway }}</span>
+                        <p>{{ takeAwayPant }}</p>
+                    </div>
+                    
                     <span>{{ dinningIn }}</span>
                 </div>   
             </li>
@@ -102,6 +106,7 @@
                 extraMenu: 'Tilbehør:',
                 allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep',
                 takeAway: 'Ta med',
+                takeAwayPant: 'Pant +2Kr',
                 dinningIn: 'Inne',
                 burgerItemsFirst: [
                     {name: '23. Hamburger 100g', takeAway: '70,-', dinningIn: '80,-'},
@@ -187,6 +192,16 @@
         font-size: 1.2em;
         text-align: right;
         /* padding: 5px; */
+    }
+
+    .burgerMenu__list-takeAway {
+        color: #FBF6E5; 
+        text-align: right; 
+        font-size: 1em;  
+    }
+
+    .burgerMenu__list-takeAway > p {
+        padding-top: 5px;
     }
 
     .burgerMenu__images {
