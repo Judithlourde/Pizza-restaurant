@@ -114,7 +114,7 @@
 	}
 
 	/* Medium devices (landscape tablets, 768px and up) */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1140px) {
 		.slideshow {
 			min-width: calc(786px + 14%);
 			margin-right: auto;

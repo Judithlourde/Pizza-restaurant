@@ -105,7 +105,7 @@ export default {
         border: 2px solid  #FBF6E5;
     }
 
-    /* small devices (mobiles, 768px and down) */
+    /* small devices (mobiles, 1140px and down) */
     @media screen and (max-width: 1100px) {
         .marquee { font-size: 12px; }
         :root {

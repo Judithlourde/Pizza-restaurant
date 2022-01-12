@@ -91,7 +91,7 @@
 		padding: 0 0 30px 0;
 	}
 	
-	/* small devices (mobiles, 768px and down) */
+	/* small devices (mobiles, 1140px and down) */
 	@media screen and (max-width: 1140px) {
 		.collapsible__component {
 			font-size: 1.5em;

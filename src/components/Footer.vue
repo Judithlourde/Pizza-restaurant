@@ -154,7 +154,7 @@
         margin: 2% 10%;
     }
 
-    /* small devices (mobiles, 768px and down) */
+    /* small devices (mobiles, 1140px and down) */
     @media screen and (max-width: 1140px) {
         .footer {
             flex-direction: column;
@@ -188,7 +188,7 @@
         }
 
         .footer-bottom > p {
-            font-size: 1em;
+            font-size: .75em;
             margin-bottom: 30px;
 
         }
