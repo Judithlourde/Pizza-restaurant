@@ -2,22 +2,22 @@
     <section class="pizzaMenu">
         <ol class="pizzaMenu__list">
             <li>
-               <h3>Spis her + 10kr</h3>   
+               <h3>{{ eatingHere }}</h3>   
 
                <div class="pizzaMenu__pizzaSize">
                     <div> 
-                        <span>Medium</span>
-                        <span>30 cm</span>
+                        <span>{{ medium }}</span>
+                        <span>{{ thirtyCM }}</span>
                     </div>
 
                     <div> 
-                        <span>Stor</span>
-                        <span>40cm</span>
+                        <span>{{ large }}</span>
+                        <span>{{ fourtyCM }}</span>
                     </div>
 
                     <div> 
-                        <span>Glutenfri</span>
-                        <span>30 cm</span>
+                        <span>{{ glutenfri }}</span>
+                        <span>{{ thirtyCM }}</span>
                     </div>  
                 </div>   
             </li>
@@ -42,18 +42,18 @@
                 <h3></h3>   
                 <div class="pizzaMenu__pizzaSize">
                     <div> 
-                        <span>Medium</span>
-                        <span>30 cm</span>
+                        <span>{{ medium }}</span>
+                        <span>{{ thirtyCM }}</span>
                     </div>
 
                     <div> 
-                        <span>Stor</span>
-                        <span>40 cm</span>
+                        <span>{{ large }}</span>
+                        <span>{{ fourtyCM }}</span>
                     </div>
 
                     <div> 
-                        <span>Glutenfri</span>
-                        <span>30 cm</span>
+                        <span>{{ glutenfri }}</span>
+                        <span>{{ thirtyCM }}</span>
                     </div>    
                 </div>   
             </li> 
@@ -96,6 +96,12 @@
 	export default {
 		data() {
 			return {
+                eatingHere: 'Spis her + 10kr',
+                medium: 'Medium',
+                large: 'Stor',
+                glutenfri: 'Glutenfri',
+                thirtyCM: '30 cm',
+                fourtyCM: '40 cm',
                 extraMenu: 'Tilbehør:',
 				pizzaItemsFirst: [
 					{ name: '1. VESUVIO', description: 'Tomatsaus, ost og skinke', medium: '170,-', large: '200,-', glutenfri: '200,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri', },
@@ -221,22 +227,22 @@
         padding-top: 30px;
     } */
 
-    /* small devices (mobiles, 768px and down) */
+    /* small devices (mobiles, 1140px and down) */
     @media screen and (max-width: 1140px) {
         .pizzaMenu {
-            font-size: 1.1em;
+            font-size: .95em;
             display: flex;
             flex-direction: column;
             max-width: calc(786px + 14%);
         }	
 
         .pizzaMenu__pizzaSize > div > span {
-            font-size: 1.15em;
+            font-size: 1em;
         }
 
         .pizzaMenu__pizzaName > p {
-            font-size: 1.15em;
-            padding-bottom: 20px;
+            font-size: 1em;
+            padding-bottom: 10px;
         }
 
         .pizzaMenu__list--mobile {
