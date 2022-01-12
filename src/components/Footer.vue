@@ -24,7 +24,7 @@
             <li>
                 <div class="footer__contact-icon">
                     <img src="/svg/email.svg" alt="email-icon">
-                    <p>shahinzatgar@hotmail.com</p>
+                    <p>shahinzargar@hotmail.com</p>
                 </div>  
             </li>
 
