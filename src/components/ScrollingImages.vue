@@ -22,7 +22,7 @@ export default {
 			return {
 				index: 4,
 				showCaption: false, 
-				images: [ { title: 'Pizza', caption: 'Pizza', file: '/images/img1.jpeg' }, { title: 'Noodle', caption: 'Nudler', file: '/images/img2.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img3.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img4.jpg' }, { title: 'Pizza', caption: 'Italiensk Pizza', file: '/images/img5.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img6.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img8.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img9.jpeg' }, ],  
+				images: [ { title: 'Pizza', caption: 'Pizza', file: '/images/img1.jpeg' }, { title: 'Noodle', caption: 'Nudler', file: '/images/img2.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img3.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img4.jpg' }, { title: 'Pizza', caption: 'Italiensk Pizza', file: '/images/img5.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img6.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img7.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img8.jpeg' }, ],  
 			};
 		},
 }
