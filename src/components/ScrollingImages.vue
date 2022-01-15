@@ -87,21 +87,15 @@ export default {
         justify-content: center;
         align-items: center;
         width: var(--marquee-element-width);
-        /* max-width: 100%; */
         flex-shrink: 0;
         white-space: nowrap;
         margin: 20px;
         position: relative;
-        /* width: 300px; */
-        /* width: 100%; */
-        /* height: 100%; */
     }
 
     .marquee-content figcaption {
         position: absolute;
         bottom: 0;
-        /* color: rgb(240, 196, 179); */
-        font-size: 20px;
     }
 
     .marquee-content > figure > img {
