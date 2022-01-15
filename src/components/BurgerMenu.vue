@@ -78,20 +78,10 @@
             </li>
         </ul>
         
-        <ul class="burgerMenu__images">
-            <div class="burgerMenu__image">
-                <img src="/images/burger.jpg" alt="burger-image">
-            </div>
-
-            <div class="burgerMenu__image">
-                <img src="/images/burger2.jpg" alt="burger-image">
-            </div>
-
-            <div class="burgerMenu__image">
-                <img src="/images/cola.jpg" alt="cola-image">
-            </div>
-        </ul>
-        
+        <figure class="burgerMenu__image">
+            <img src="/images/burger.jpg" alt="burger-image">
+            <figcaption>Hamburger, HamburgerMeny, drikke</figcaption>
+        </figure>    
     </section>
 </template>
 
@@ -108,27 +98,11 @@
                 takeAway: 'Ta med',
                 takeAwayPant: 'Pant +2Kr',
                 dinningIn: 'Inne',
-                burgerItemsFirst: [
-                    {name: '23. Hamburger 100g', takeAway: '70,-', dinningIn: '80,-'},
-                    {name: '24. Hamburger 130g', takeAway: '80,-', dinningIn: '90,-'},
-                    {name: '25. Hamburger 160g', takeAway: '90,-', dinningIn: '100,-'},
-                    {name: '26. Hamburger 190g', takeAway: '110,-', dinningIn: '120,-'},
-                    {name: '27. Hamburger 250g', takeAway: '130,-', dinningIn: '140,-'},
-                    {name: '28. Løvstekburger', takeAway: '90,-', dinningIn: '100,-'},
-                ],
+                burgerItemsFirst: [ {name: '23. Hamburger 100g', takeAway: '70,-', dinningIn: '80,-'}, {name: '24. Hamburger 130g', takeAway: '80,-', dinningIn: '90,-'}, {name: '25. Hamburger 160g', takeAway: '90,-', dinningIn: '100,-'}, {name: '26. Hamburger 190g', takeAway: '110,-', dinningIn: '120,-'}, {name: '27. Hamburger 250g', takeAway: '130,-', dinningIn: '140,-'}, {name: '28. Løvstekburger', takeAway: '90,-', dinningIn: '100,-'}, ],
 
-                burgerItemsSecond: [
-                    {name: '29. Hamburger 100g', takeAway: '120,-', dinningIn: '130,-'},
-                    {name: '30. Hamburger 130g', takeAway: '130,-', dinningIn: '140,-'},
-                    {name: '31. Hamburger 160g', takeAway: '140,-', dinningIn: '150,-'},
-                    {name: '32. Hamburger 190g', takeAway: '160,-', dinningIn: '170,-'},
-                    {name: '33. Hamburger 250g', takeAway: '180,-', dinningIn: '190,-'},
-                ],
+                burgerItemsSecond: [ {name: '29. Hamburger 100g', takeAway: '120,-', dinningIn: '130,-'}, {name: '30. Hamburger 130g', takeAway: '130,-', dinningIn: '140,-'}, {name: '31. Hamburger 160g', takeAway: '140,-', dinningIn: '150,-'}, {name: '32. Hamburger 190g', takeAway: '160,-', dinningIn: '170,-'}, {name: '33. Hamburger 250g', takeAway: '180,-', dinningIn: '190,-'}, ],
 
-                extraMenuItems: [
-                    {name: 'Ost', takeAway: '10,-', dinningIn: '12,-'},
-                    {name: 'Bacon', takeAway: '12,-', dinningIn: '14,-'}
-                ]
+                extraMenuItems: [ {name: 'Ost', takeAway: '10,-', dinningIn: '12,-'}, {name: 'Bacon', takeAway: '12,-', dinningIn: '14,-'} ]
 
             }
             
@@ -143,10 +117,8 @@
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         font-size: .85em;
     }
 
@@ -191,7 +163,6 @@
         color: #FBF6E5;
         font-size: 1.2em;
         text-align: right;
-        /* padding: 5px; */
     }
 
     .burgerMenu__list-takeAway {
@@ -204,20 +175,18 @@
         padding-top: 5px;
     }
 
-    .burgerMenu__images {
-        display: flex;
-        gap: 10px;
-        padding: 30px 0;
+    .burgerMenu__image {
+        position: relative;
+        padding: 30px;
     }
 
-    .burgerMenu__image {
-        width: 200px;
-        height: 200px;
+    .burgerMenu__image > figcaption {
+        text-align: center;
     }
 
     .burgerMenu__image > img {
         width: 100%;
-        height: 100%;
+        object-fit: cover;
     }
 
     /* small devices (mobiles, 1140px and down) */
@@ -226,13 +195,12 @@
             font-size: 1.1em;
             max-width: calc(786px + 14%);
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             gap: 30px;
         }
 
         .burgerMenu__image {
-            width: 300px;
-            height: 300px;
+            align-self: center;
         }
 
         .burgerMenu__list li {

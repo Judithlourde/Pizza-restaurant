@@ -188,7 +188,7 @@
         }
 
         .footer-bottom > p {
-            font-size: .75em;
+            font-size: .85em;
             margin-bottom: 30px;
 
         }

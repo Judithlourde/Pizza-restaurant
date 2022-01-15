@@ -26,13 +26,7 @@
 			return {
 				index: 0, 
 				showCaption: true,
-				slides: [
-					{ title: 'Pizza', caption: 'Pizza', file:  '/images/img1.jpeg' },
-					{ title: 'Noodle', caption: 'Noodle', file:  '/images/img2.jpeg' },
-					{ title: 'Pizza', caption: 'Pizza', file:  '/images/img3.jpeg' },
-					// { title: 'Pizza', caption: 'Pizza', file:  '/images/img4.jpg' },
-					
-				],
+				slides: [ { title: 'Pizza', caption: 'Pizza', file:  '/images/img1.jpeg' }, { title: 'Noodle', caption: 'Noodle', file:  '/images/img2.jpeg' }, { title: 'Pizza', caption: 'Pizza', file:  '/images/img3.jpeg' }, ],
 			};
 		},
 		

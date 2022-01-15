@@ -83,18 +83,10 @@
             </li>
         </ul>
 
-        <ul class="kebabMenu__images">
-            <div class="kebabMenu__image">
-                <img src="/images/burger.jpg" alt="burger-image">
-            </div>
-
-            <div class="kebabMenu__image">
-                <img src="/images/burger2.jpg" alt="burger-image">
-            </div>
-                <div class="kebabMenu__image">
-                <img src="/images/cola.jpg" alt="cola-image">
-            </div>
-        </ul>
+        <figure class="kebabMenu__image">
+            <img src="/images/kebab.jpg" alt="kebab-image">
+            <figcaption>Kebabrull, Kebab i Pita, Kebabtallerken, drikke</figcaption>
+        </figure>
     </section>
 </template>
 
@@ -112,29 +104,11 @@
                 takeAway: 'Ta med',
                 takeAwayPant: 'Pant +2Kr',
                 dinningIn: 'Inne',
-                kebabItemsFirst: [
-                    {name: '34. Kebab i pita vanlig', takeAway: '95,-', dinningIn: '105,-'},
-                    {name: '35. Kebab i pita stor', takeAway: '110,-', dinningIn: '120,-'},
-                    {name: '36.Kylling i pita liten', takeAway: '110,-', dinningIn: '120,-'},
-                    {name: '37. Kylling i pita stor', takeAway: '120,-', dinningIn: '130,-'},
-                    {name: '38. Falafel i pita', takeAway: '85,-', dinningIn: '95,-'}
-                ],
+                kebabItemsFirst: [ {name: '34. Kebab i pita vanlig', takeAway: '95,-', dinningIn: '105,-'}, {name: '35. Kebab i pita stor', takeAway: '110,-', dinningIn: '120,-'}, {name: '36.Kylling i pita liten', takeAway: '110,-', dinningIn: '120,-'}, {name: '37. Kylling i pita stor', takeAway: '120,-', dinningIn: '130,-'}, {name: '38. Falafel i pita', takeAway: '85,-', dinningIn: '95,-'} ],
 
-                kebabItemsSecond: [
-                    {name: '39. Kebabrull vanlig', takeAway: '120,-', dinningIn: '130,-'},
-                    {name: '40. Kebabrull vanlig m/ost', takeAway: '140,-', dinningIn: '150,-'},
-                    {name: '41. Kebabrull kylling', takeAway: '140,-', dinningIn: '150,-'},
-                    {name: '42. Kebabrull kylling m/ost', takeAway: '160,-', dinningIn: '170,-'},
-                    {name: '44. Kebabrull biff m/ost', takeAway: '160,-', dinningIn: '170,-'},
-                    {name: '45. Falafelrull', takeAway: '95,-', dinningIn: '105,-'},
-                ],
+                kebabItemsSecond: [ {name: '39. Kebabrull vanlig', takeAway: '120,-', dinningIn: '130,-'}, {name: '40. Kebabrull vanlig m/ost', takeAway: '140,-', dinningIn: '150,-'}, {name: '41. Kebabrull kylling', takeAway: '140,-', dinningIn: '150,-'}, {name: '42. Kebabrull kylling m/ost', takeAway: '160,-', dinningIn: '170,-'}, {name: '44. Kebabrull biff m/ost', takeAway: '160,-', dinningIn: '170,-'}, {name: '45. Falafelrull', takeAway: '95,-', dinningIn: '105,-'}, ],
 
-                kebabItemsThird: [
-                    {name: '46. Kebabtallerken vanlig', takeAway: '160,-', dinningIn: '170,-'},
-                    {name: '47. Kebabtallerken stor', takeAway: '180,-', dinningIn: '190,-'},
-                    {name: '48. Kyllingtallerken vanlig', takeAway: '170,-', dinningIn: '180,-'},
-                    {name: '49. Kyllingtallerken stor', takeAway: '190,-', dinningIn: '200,-'},
-                ]
+                kebabItemsThird: [ {name: '46. Kebabtallerken vanlig', takeAway: '160,-', dinningIn: '170,-'}, {name: '47. Kebabtallerken stor', takeAway: '180,-', dinningIn: '190,-'}, {name: '48. Kyllingtallerken vanlig', takeAway: '170,-', dinningIn: '180,-'}, {name: '49. Kyllingtallerken stor', takeAway: '190,-', dinningIn: '200,-'}, ]
             }
         }
     }
@@ -147,10 +121,8 @@
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         font-size: .85em;
     }
 
@@ -197,12 +169,6 @@
         text-align: right;
     }
 
-    .kebabMenu__images {
-        display: flex;
-        gap: 10px;
-        padding: 100px 0;
-    }
-
     .kebabMenu__list-takeAway {
         color: #FBF6E5; 
         text-align: right; 
@@ -214,13 +180,17 @@
     }
 
     .kebabMenu__image {
-        width: 200px;
-        height: 200px;
+        padding: 30px;
+        position: relative;
+    }
+
+    .kebabMenu__image > figcaption {
+        text-align: center;
     }
 
     .kebabMenu__image > img {
         width: 100%;
-        height: 100%;
+        object-fit: cover;
     }
 
     /* small devices (mobiles, 1140px and down) */
@@ -234,8 +204,7 @@
         }
 
         .kebabMenu__image {
-            width: 300px;
-            height: 300px;
+            align-self: center;
         }
 
         .kebabMenu__list li {

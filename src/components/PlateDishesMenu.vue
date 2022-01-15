@@ -35,35 +35,6 @@
 
         <ul class="plateDishesMenu__list">
             <div> 
-                <h3>{{ otherDishesTitle }}</h3>
-            </div>
-
-            <li>
-                <h3></h3>
-
-                <div>
-                    <span>{{ takeAwayTitle }}</span>
-                    <span>{{ dinningInTitle }}</span>
-                </div>   
-            </li>
-
-            <li v-for="otherDish in otherDishes" :key="otherDish"> 
-                <div>
-                    <h3>{{ otherDish.name }}</h3>
-                    <p class="plateDishesMenu__list-allergi">{{ otherDish.allergi }}</p>
-                </div>
-
-                <div>
-                    <span>{{ otherDish.takeAway }}</span>
-                    <span>{{ otherDish.dinningIn }}</span>
-                </div>
-            </li>
-        </ul>
-    </section> 
-
-    <section class="plateDishesMenu">
-        <ul class="plateDishesMenu__list">
-            <div> 
                 <h1>{{ kidsMenuTitle }}</h1>
                 <p>{{ kidsMenuDescription }}</p>
             </div>
@@ -88,21 +59,47 @@
                     <span>{{ menu.dinningIn }}</span>
                 </div>
             </li>
+
+            <figure class="plateDishesMenu__image">
+                <img src="/images/kids_menu.jpg" alt="kids_menu-image">
+                <figcaption>Barnemeny</figcaption>
+            </figure>
         </ul>
+    </section> 
 
-        <ul class="plateDishesMenu__images">
-            <div class="plateDishesMenu__image">
-                <img src="/images/burger.jpg" alt="burger-image">
+    <section class="plateDishesMenu">
+        <ul class="plateDishesMenu__list">
+            <div> 
+                <h3>{{ otherDishesTitle }}</h3>
             </div>
 
-            <div class="plateDishesMenu__image">
-                <img src="/images/burger2.jpg" alt="burger-image">
-            </div>
+            <li>
+                <h3></h3>
 
-                <div class="plateDishesMenu__image">
-                <img src="/images/cola.jpg" alt="cola-image">
-            </div>
+                <div>
+                    <span>{{ takeAwayTitle }}</span>
+                    <span>{{ dinningInTitle }}</span>
+                </div>   
+            </li>
+
+            <li v-for="otherDish in otherDishes" :key="otherDish"> 
+                <div>
+                    <h3>{{ otherDish.name }}</h3>
+                    <p class="plateDishesMenu__list-allergi">{{ otherDish.allergi }}</p>
+                </div>
+
+                <div>
+                    <span>{{ otherDish.takeAway }}</span>
+                    <span>{{ otherDish.dinningIn }}</span>
+                </div>
+            </li>
         </ul>
+ 
+        <figure class="plateDishesMenu__image">
+            <img src="/images/plate_menu.jpg" alt="Plate_Dishes_menu-image">
+            <figcaption>Tallerkenretter</figcaption>
+        </figure>
+
     </section>
 </template>
 
@@ -119,27 +116,11 @@
                 takeAwayPant: 'Pant +2Kr',
                 dinningInTitle: 'Inne',
 
-                plateDishes: [
-                    {name: '50. Biffsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Egg, Melk, Selleri, Sennep'},
-                    {name: '51. Kyllingsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
-                    {name: '52. Kyllingfiletmiddag', takeAway: '220,-', dinningIn: '230,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep' },
-                    {name: '53. Løvstektallerken enkel', takeAway: '150,-', dinningIn: '160,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
-                    {name: '54. Løvstektallerken dobbel', takeAway: '184,-', dinningIn: '194,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'},
-                    {name: '55. Nuggetstallerken 7 biter', takeAway: '109,-', dinningIn: '110,-', allergi: 'Gluten (Hvete)' },
-                    {name: '56. Nuggetstallerken 12 biter', takeAway: '149,-', dinningIn: '159,-', allergi: 'Gluten (Hvete)' }
-                ],
+                plateDishes: [ {name: '50. Biffsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Egg, Melk, Selleri, Sennep'}, {name: '51. Kyllingsnaddertallerken', takeAway: '194,-', dinningIn: '204,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'}, {name: '52. Kyllingfiletmiddag', takeAway: '220,-', dinningIn: '230,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep' }, {name: '53. Løvstektallerken enkel', takeAway: '150,-', dinningIn: '160,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'}, {name: '54. Løvstektallerken dobbel', takeAway: '184,-', dinningIn: '194,-', allergi: 'Gluten (Hvete), Egg, Melk, Selleri, Sennep'}, {name: '55. Nuggetstallerken 7 biter', takeAway: '109,-', dinningIn: '110,-', allergi: 'Gluten (Hvete)' }, {name: '56. Nuggetstallerken 12 biter', takeAway: '149,-', dinningIn: '159,-', allergi: 'Gluten (Hvete)' } ],
 
-                otherDishes: [
-                    {name: 'Pommes frites liten', takeAway: '45,-', dinningIn: '55,-', allergi: 'Selleri (i krydderet)'},
-                    {name: 'Pommes frites liten', takeAway: '55,-', dinningIn: '65,-', allergi: 'Selleri (i krydderet)'},
-                    {name: 'Brus 0,5 l', takeAway: '35,-', dinningIn: '38,-'},
-                    {name: 'Brus 1,5 l', takeAway: '55,-', dinningIn: '60,-'}
-                ],
+                otherDishes: [ {name: 'Pommes frites liten', takeAway: '45,-', dinningIn: '55,-', allergi: 'Selleri (i krydderet)'}, {name: 'Pommes frites liten', takeAway: '55,-', dinningIn: '65,-', allergi: 'Selleri (i krydderet)'}, {name: 'Brus 0,5 l', takeAway: '35,-', dinningIn: '38,-'}, {name: 'Brus 1,5 l', takeAway: '55,-', dinningIn: '60,-'} ],
 
-                kidsMenu: [
-                    {name: 'Grillpølse', takeAway: '80,-', dinningIn: '90,-', allergi: 'Brød: Gluten (Hvete), Egg, Melk, Sesam, Pommes frites: Selleri (i krydderet)'},
-                    {name: 'Nuggets', takeAway: '80,-', dinningIn: '90,-', allergi: 'Pommes frites: Selleri (i krydderet)'}
-                ]
+                kidsMenu: [ {name: 'Grillpølse', takeAway: '80,-', dinningIn: '90,-', allergi: 'Brød: Gluten (Hvete), Egg, Melk, Sesam, Pommes frites: Selleri (i krydderet)'}, {name: 'Nuggets', takeAway: '80,-', dinningIn: '90,-', allergi: 'Pommes frites: Selleri (i krydderet)'} ]
             }
         }    
     }
@@ -152,10 +133,8 @@
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         font-size: .85em;
     }
 
@@ -213,20 +192,18 @@
         padding-top: 5px;
     }
 
-    .plateDishesMenu__images {
-        display: flex;
-        gap: 10px;
-        padding: 40px 0;
+    .plateDishesMenu__image {
+        position: relative;
+        padding: 30px;
     }
 
-    .plateDishesMenu__image {
-        width: 200px;
-        height: 200px;
+    .plateDishesMenu__image > figcaption {
+        text-align: center;
     }
 
     .plateDishesMenu__image > img {
         width: 100%;
-        height: 100%;
+        object-fit: cover;
     }
 
     /* small devices (mobiles, 1140px and down) */
@@ -240,8 +217,7 @@
         }
 
         .plateDishesMenu__image {
-            width: 300px;
-            height: 300px;
+            align-self: center;
         }
 
         .plateDishesMenu__list li {

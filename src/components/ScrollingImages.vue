@@ -1,14 +1,18 @@
 <template>
     <div class="marquee">
-        <ul class="marquee-content">
-            <li v-for="image in images" :key="image">
+        <div class="marquee-content">
+            <figure v-for="image in images" :key="image">
                 <img class="slideshow__img" :src="image.file" :alt="image.caption">
-            </li>
+                
+                <figcaption v-if="showCaption">{{ image.caption }}</figcaption>  
+            </figure>
+             
+            <figure v-for="image in images" :key="image">
+                <img v-if="index >= 2" class="slideshow__img" :src="image.file" :alt="image.caption">
 
-            <li v-for="image in images" :key="image">
-                <img class="slideshow__img" :src="image.file" :alt="image.caption">
-            </li>
-        </ul>
+                <figcaption v-if="showCaption">{{ image.caption }}</figcaption>  
+            </figure>
+        </div>
     </div>
 </template>
 
@@ -16,20 +20,9 @@
 export default {
 		data() {
 			return {
-				index: 0,
-				showCaption: true, 
-				images: [
-					{ title: 'Pizza', caption: 'Pizza', file: '/images/img1.jpeg' },
-					{ title: 'Noodle', caption: 'Noodle', file: '/images/img2.jpeg' },
-					{ title: 'Pizza', caption: 'Pizza', file: '/images/img3.jpeg' },
-					{ title: 'Pizza', caption: 'Pizza', file: '/images/img4.jpg' },
-                    { title: 'Pizza', caption: 'Pizza', file: '/images/img5.jpeg' },
-                    { title: 'Pizza', caption: 'Pizza', file: '/images/img6.jpeg' },
-                    { title: 'Pizza', caption: 'Pizza', file: '/images/img7.jpeg' },
-                    { title: 'Pizza', caption: 'Pizza', file: '/images/img8.jpeg' },
-                    { title: 'Pizza', caption: 'Pizza', file: '/images/img9.jpeg' },
-
-				],  
+				index: 4,
+				showCaption: false, 
+				images: [ { title: 'Pizza', caption: 'Pizza', file: '/images/img1.jpeg' }, { title: 'Noodle', caption: 'Nudler', file: '/images/img2.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img3.jpeg' }, { title: 'Pizza', caption: 'Pizza', file: '/images/img4.jpg' }, { title: 'Pizza', caption: 'Italiensk Pizza', file: '/images/img5.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img6.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img8.jpeg' }, { title: 'Pizza', caption: 'Wok', file: '/images/img9.jpeg' }, ],  
 			};
 		},
 }
@@ -39,10 +32,10 @@ export default {
     :root {
         --marquee-width: 80vw;
         --marquee-height: 30vh;
-        --marquee-elements: 9;
+        --marquee-elements: 8;
         --marquee-elements-displayed: 3;
         --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-        --marquee-animation-duration: calc(var(--marquee-elements) * 4s);
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
     }
 
     .marquee {
@@ -56,7 +49,7 @@ export default {
     .marquee:before, .marquee:after {
         position: absolute;
         top: 0;
-        width: 1rem;
+        width: 12rem;
         height: 100%;
         content: "";
         z-index: 1;
@@ -73,6 +66,7 @@ export default {
     }
 
     .marquee-content {
+        width: 100%;
         height: 100%;
         list-style: none;
         display: flex;
@@ -88,37 +82,48 @@ export default {
         animation-play-state: paused;
     }
 
-    .marquee-content li {
+    .marquee-content figure {
         display: flex;
         justify-content: center;
         align-items: center;
         width: var(--marquee-element-width);
+        /* max-width: 100%; */
         flex-shrink: 0;
-        /* font-size: calc(var(--marquee-height) * 2 / 3); */
         white-space: nowrap;
         margin: 20px;
-        width: 300px;
+        position: relative;
+        /* width: 300px; */
+        /* width: 100%; */
+        /* height: 100%; */
     }
 
-    .marquee-content > li > img {
-        width: 100%;
-        border: 2px solid  #FBF6E5;
+    .marquee-content figcaption {
+        position: absolute;
+        bottom: 0;
+        /* color: rgb(240, 196, 179); */
+        font-size: 20px;
+    }
+
+    .marquee-content > figure > img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border: .5px solid  #FBF6E5;
     }
 
     /* small devices (mobiles, 1140px and down) */
-    @media screen and (max-width: 1100px) {
-        .marquee { font-size: 12px; }
+    @media screen and (max-width: 1140px) {
         :root {
-            --marquee-width: 100vw;
-            --marquee-height: 16vh;
-            --marquee-element-displayed: 3;
+            --marquee-width: 100%;
+            --marquee-height: 20vh;
+            --marquee-element-displayed: 2;
         }
 
         .marquee:before, .marquee:after {
-            width: 5rem;
+            width: 7rem;
         }
 
-        .marquee-content li {
+        .marquee-content figure {
             width: 500px;
         }
     }
