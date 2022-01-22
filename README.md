@@ -1,4 +1,5 @@
 # Pizza-restaurant
-Website for one real pizza restaurant.
-Customer can view the menus for the dishes - used collabsible for the menus.
-Contacts information and link to the resaurants facebook site.
+Website for a real pizza restaurant. Collected the requirement from the customer, Designed UI, developed, deployed and hosted the website.
+Functionality:
+- Collapsible menu functionality
+- Animation
